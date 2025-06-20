@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defence Career Academy Lucknow </title>
+    <meta name="description" content="Defence Career Academy Lucknow(dca lucknow) offers comprehensive coaching for NDA, CDS,Army,Navy,Airforce, AFCAT, and SSB. Join India's premier defence training institute with expert faculty and world-class facilities and Excellence in Defence Training.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Call Now Bar -->
+    <div class="call-now-bar">
+        <span class="call-now-label">Call Now:</span>
+        <a href="tel:8115000000" class="call-link"><i class="fas fa-phone"></i> 8115000000</a>
+        <span class="call-separator">|</span>
+        <a href="tel:8896000000" class="call-link"><i class="fas fa-phone"></i> 8896000000</a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Left Logo and Academy Name -->
+                <div class="header-left">
+                    <img src="AESPL.jpg" 
+                         alt="Defence Academy Logo" class="logo">
+                    <div class="academy-info">
+                        <h1 class="academy-name" data-en="Defence Career Academy Lucknow" data-hi="डिफेन्स कैरियर अकादमी लखनऊ">Defence Career Academy Lucknow</h1>
+                        <p class="academy-company" data-en="(ARUN EDUCATIONAL SERVICES PRIVATE LIMITED AN ISO 9001-2008 CERTIFIED ORGANIZATION)" data-hi="(अरुण एजूकेशनल सर्विसेस प्रा० लिए लखनऊ का उपक्रम AN ISO 9001-2008 प्रमाणित संस्था)">(ARUN EDUCATIONAL SERVICES PRIVATE LIMITED AN ISO 9001-2008 CERTIFIED ORGANIZATION)</p>
+                    </div>
+                </div>
+                
+                <!-- Language Toggle & Right Logo -->
+                <div class="header-right">
+                    <button id="languageToggle" class="language-btn">हिंदी</button>
+                    <img src="dcalogo1.png" 
+                         alt=" Logo" class="logo">
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" data-en="Home" data-hi="होम">Home</a></li>
+                <li><a href="#about" data-en="About" data-hi="हमारे बारे में">About</a></li>
+                <li><a href="#courses" data-en="Courses" data-hi="पाठ्यक्रम">Courses</a></li>
+                <li><a href="#services" data-en="Services" data-hi="सेवाएं">Services</a></li>
+                <li><a href="#gallery" data-en="Gallery" data-hi="गैलरी">Gallery</a></li>
+                <li><a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <section id="home" class="slider-section">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('indianarmy1.jpg')">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h2 class="slide-title" data-en="Excellence in Defence Training" data-hi="रक्षा प्रशिक्षण में उत्कृष्टता">Excellence in Defence Training</h2>
+                        <p class="slide-subtitle" data-en="Preparing future defenders of the nation" data-hi="राष्ट्र के भावी रक्षकों को तैयार करना">Preparing future defenders of the nation</p>
+                        <button class="slide-btn btn-red" data-en="Explore Programs" data-hi="कार्यक्रम देखें" onclick="scrollToSection('contact')">Explore Programs</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('inidannavy1.jpg')">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h2 class="slide-title" data-en="Strategic Leadership" data-hi="रणनीतिक नेतृत्व">Strategic Leadership</h2>
+                        <p class="slide-subtitle" data-en="Building tomorrow's military leaders" data-hi="कल के सैन्य नेताओं का निर्माण">Building tomorrow's military leaders</p>
+                        <button class="slide-btn btn-green" data-en="Join Academy" data-hi="अकादमी में शामिल हों" onclick="scrollToSection('contact')">Join Academy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('parasf.png')">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h2 class="slide-title" data-en="Excellence in Defence Training" data-hi="रक्षा प्रशिक्षण में उत्कृष्टता">Excellence in Defence Training</h2>
+                        <p class="slide-subtitle" data-en="Preparing future defenders of the nation" data-hi="राष्ट्र के भावी रक्षकों को तैयार करना">Preparing future defenders of the nation</p>
+                        <button class="slide-btn btn-red" data-en="Explore Programs" data-hi="कार्यक्रम देखें" onclick="scrollToSection('contact')">Explore Programs</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('inidannavy2.jpg')">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h2 class="slide-title" data-en="World-Class Facilities" data-hi="विश्व स्तरीय सुविधाएं">World-Class Facilities</h2>
+                        <p class="slide-subtitle" data-en="State-of-the-art infrastructure for comprehensive training" data-hi="व्यापक प्रशिक्षण के लिए अत्याधुनिक बुनियादी ढांचा">State-of-the-art infrastructure for comprehensive training</p>
+                        <button class="slide-btn btn-dark" data-en="Take Tour" data-hi="दौरा करें" onclick="scrollToSection('contact')">Take Tour</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('inidannavy3.jpg')">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h2 class="slide-title" data-en="Excellence in Defence Training" data-hi="रक्षा प्रशिक्षण में उत्कृष्टता">Excellence in Defence Training</h2>
+                        <p class="slide-subtitle" data-en="Preparing future defenders of the nation" data-hi="राष्ट्र के भावी रक्षकों को तैयार करना">Preparing future defenders of the nation</p>
+                        <button class="slide-btn btn-red" data-en="Explore Programs" data-hi="कार्यक्रम देखें" onclick="scrollToSection('contact')">Explore Programs</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('iaf.png')">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h2 class="slide-title" data-en="Strategic Leadership" data-hi="रणनीतिक नेतृत्व">Strategic Leadership</h2>
+                        <p class="slide-subtitle" data-en="Building tomorrow's military leaders" data-hi="कल के सैन्य नेताओं का निर्माण">Building tomorrow's military leaders</p>
+                        <button class="slide-btn btn-green" data-en="Join Academy" data-hi="अकादमी में शामिल हों" onclick="scrollToSection('contact')">Join Academy</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation arrows -->
+            <button class="slider-nav prev" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-nav next" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Dots indicator -->
+            <div class="slider-dots" id="slider-dots">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="About Our Academy" data-hi="हमारी अकादमी के बारे में">About Our Academy</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="Defence Career Academy, Krishna Nagar, Lucknow, Uttar Pradesh, has been a cornerstone of defence education since its establishment in 2008. For over 17 years, the academy has been dedicated to shaping the futures of aspiring candidates who aim to serve in the Indian Armed Forces and various paramilitary organizations. With a strong reputation and a commitment to excellence, the academy has become a trusted name in defence coaching in Lucknow." 
+                       data-hi="डिफेंस कैरियर  अकादमी, कृष्णा नगर, लखनऊ, उत्तर प्रदेश, 2008 में अपनी स्थापना के बाद से ही रक्षा शिक्षा की आधारशिला रही है। 17 से अधिक वर्षों से, अकादमी उन इच्छुक उम्मीदवारों के भविष्य को आकार देने के लिए समर्पित है, जो भारतीय सशस्त्र बलों और विभिन्न अर्धसैनिक संगठनों में सेवा करने का लक्ष्य रखते हैं। एक मजबूत प्रतिष्ठा और उत्कृष्टता के प्रति प्रतिबद्धता के साथ, अकादमी लखनऊ में रक्षा कोचिंग में एक विश्वसनीय नाम बन गई है।">
+                        Defence Career Academy, Krishna Nagar, Lucknow, Uttar Pradesh, has been a cornerstone of defence education since its establishment in 2008. For over 17 years, the academy has been dedicated to shaping the futures of aspiring candidates who aim to serve in the Indian Armed Forces and various paramilitary organizations. With a strong reputation and a commitment to excellence, the academy has become a trusted name in defence coaching in Lucknow.
+                    </p>
+                </div>
+
+                <div class="mission-vision-grid">
+                    <div class="mission-card">
+                        <div class="card-header">
+                            <i class="fas fa-bullseye"></i>
+                            <h3 data-en="Our Mission" data-hi="हमारा मिशन">Our Mission</h3>
+                        </div>
+                        <p data-en="The mission of Defence Career Academy is to empower students with the knowledge, skills, and confidence required to excel in the highly competitive examinations for the Indian Armed Forces. The academy strives to foster a disciplined and focused learning environment, enabling candidates to achieve their dreams of serving the nation."
+                           data-hi="डिफेंस कैरियर  अकादमी का मिशन छात्रों को भारतीय सशस्त्र बलों के लिए अत्यधिक प्रतिस्पर्धी परीक्षाओं में उत्कृष्टता प्राप्त करने के लिए आवश्यक ज्ञान, कौशल और आत्मविश्वास से सशक्त बनाना है। अकादमी एक अनुशासित और केंद्रित शिक्षण वातावरण को बढ़ावा देने का प्रयास करती है, जिससे उम्मीदवार राष्ट्र की सेवा करने के अपने सपनों को प्राप्त कर सकें।">
+                            The mission of Defence Career Academy is to empower students with the knowledge, skills, and confidence required to excel in the highly competitive examinations for the Indian Armed Forces. The academy strives to foster a disciplined and focused learning environment, enabling candidates to achieve their dreams of serving the nation.
+                        </p>
+                    </div>
+
+                    <div class="vision-card">
+                        <div class="card-header">
+                            <i class="fas fa-eye"></i>
+                            <h3 data-en="Our Vision" data-hi="हमारा विजन">Our Vision</h3>
+                        </div>
+                        <p data-en="Our vision is to be a leading institution that consistently produces successful candidates who uphold the values of duty, honor, and patriotism in their defence careers."
+                           data-hi="हमारा विजन एक अग्रणी संस्थान बनना है जो लगातार सफल उम्मीदवारों का उत्पादन करता है जो अपने रक्षा कैरियर  में कर्तव्य, सम्मान और देशभक्ति के मूल्यों को बनाए रखते हैं।">
+                            Our vision is to be a leading institution that consistently produces successful candidates who uphold the values of duty, honor, and patriotism in their defence careers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-grid">
+                <div class="faculty-promo-container">
+                    <div class="promo-heading">
+                        <h2 data-en="Take Admission in India's No. 1 Academy" data-hi="भारत की नं. 1 अकादमी में प्रवेश लें">
+                            भारत की <span class="promo-highlight">नं. 1</span> अकादमी में प्रवेश लें
+                        </h2>
+                    </div>
+
+                    <div class="promo-main-grid">
+                        <div class="faculty-member-promo">
+                            <div class="faculty-image-container">
+                                <img src="RAJ KUMAR CHAUHAN.png" alt="Brig. Raj Kumar Chauhan" class="faculty-img-promo">
+                            </div>
+                            <div class="faculty-info">
+                                <h3 class="faculty-name" data-en="Brig. (Retd.) Raj Kumar Chauhan" data-hi="ब्रिगेडियर (से.नि) राजकुमार चौहान">ब्रिगेडियर (से.नि) राजकुमार चौहान</h3>
+                                <p class="faculty-title" data-en="Vishisht Seva Mandal, Founder & Patron" data-hi="विशिष्ट सेवा मंडल, संस्थापक एवं संरक्षक">विशिष्ट सेवा मंडल, संस्थापक एवं संरक्षक</p>
+                            </div>
+                        </div>
+                
+                        <div class="promo-middle-content">
+                            <div class="promo-stats">
+                                <p data-en="Over 1,50,000 successes in 17 years" data-hi="17 वर्ष में 1,50,000 से अधिक सफलताएँ">17 वर्ष में<br>1,50,000 से<br>अधिक सफलताएँ</p>
+                            </div>
+                            <div class="promo-motivation">
+                                <p data-en="If you have that zeal! That passion! Then you too can become the real heroes of the country" data-hi="अगर आप में है वो जोश! वो जुनून! तो आप भी बन सकते हैं देश के असली हीरो">अगर आप में है वो जोश! वो जुनून! तो आप भी बन सकते हैं देश के असली हीरो</p>
+                            </div>
+                        </div>
+                
+                        <div class="faculty-member-promo">
+                            <div class="faculty-image-container">
+                                <img src="majorsir.png" alt="Major Arun Kumar Singh" class="faculty-img-promo">
+                            </div>
+                            <div class="faculty-info">
+                                <h3 class="faculty-name" data-en="Major (Retd.) Arun Kumar Singh" data-hi="मेजर (से.नि) अरुण कुमार सिंह">मेजर (से.नि) अरुण कुमार सिंह</h3>
+                                <p class="faculty-title" data-en="Founder Chairman & Managing Director" data-hi="संस्थापक अध्यक्ष एवं प्रबंध निदेशक">संस्थापक अध्यक्ष एवं प्रबंध निदेशक</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Our Training Programs" data-hi="हमारे प्रशिक्षण कार्यक्रम">Our Training Programs</h2>
+                <p class="section-subtitle" data-en="Comprehensive coaching for various defence services" data-hi="विभिन्न रक्षा सेवाओं के लिए व्यापक कोचिंग">Comprehensive coaching for various defence services</p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card" onclick="openCourseModal('army')">
+                    <div class="course-icon bg-red">
+                        <img src="inidanarmy.png"/>
+                    </div>
+                    <h3 class="course-name">Indian Army</h3>
+                    <p class="course-full-name" data-en="Indian Army" data-hi="भारतीय थलसेना">Indian Army</p>
+                </div>
+                
+                <div class="course-card" onclick="openCourseModal('airforce')">
+                    <div class="course-icon bg-green">
+                        <img src="indianairforce.png"/>
+                    </div>
+                    <h3 class="course-name">Indian Air Force</h3>
+                    <p class="course-full-name" data-en="Indian Air Force" data-hi="भारतीय वायु सेना">Indian Air Force</p>
+                </div>
+                
+                <div class="course-card" onclick="openCourseModal('navy')">
+                    <div class="course-icon bg-blue">
+                        <img src="inidannavy.png"/>
+                    </div>
+                    <h3 class="course-name">Indian Navy</h3>
+                    <p class="course-full-name" data-en="Indian Navy" data-hi="भारतीय नौसेना">Indian Navy</p>
+                </div>
+                
+                <div class="course-card" onclick="openCourseModal('paramilitary')">
+                    <div class="course-icon bg-purple">
+                        <img src="paramilitiary.png"/>
+                    </div>
+                    <h3 class="course-name">Paramilitary Forces</h3>
+                    <p class="course-full-name" data-en="Paramilitary Forces" data-hi="अर्धसैनिक बल">Paramilitary Forces</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('officers')">
+                    <div class="course-icon bg-purple">
+                        <img src="National_Defence_Academy_NDA.png"/>
+                    </div>
+                    <h3 class="course-name">Officers Post</h3>
+                    <p class="course-full-name" data-en="Officers Post" data-hi="अधिकारी पद">Officers Post</p>
+                </div>
+
+                <div class="course-card" onclick="openCourseModal('police')">
+                    <div class="course-icon bg-purple">
+                        <img src="Indian_Police_service.jpg"/>
+                    </div>
+                    <h3 class="course-name">Police</h3>
+                    <p class="course-full-name" data-en="Police" data-hi="पुलिस">Police</p>
+                </div>
+
+                <div class="course-card" onclick="openCourseModal('others')">
+                    <div class="course-icon bg-purple">
+                        <img src="Jawahar_Navodaya_Vidyalaya_logo.png"/>
+                    </div>
+                    <h3 class="course-name">Others</h3>
+                    <p class="course-full-name" data-en="Others" data-hi="अन्य">Others</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Facilities Provided by Defence Career Academy" data-hi="डिफेन्स कॅरियर अकादमी द्वारा प्रदत्त सुविधाएँ">Facilities Provided by Defence Career Academy</h2>
+                <p class="section-subtitle" data-en="Our comprehensive facilities to ensure your success" data-hi="आपकी सफलता सुनिश्चित करने के लिए हमारी व्यापक सुविधाएँ">Our comprehensive facilities to ensure your success</p>
+            </div>
+            <ul class="services-list">
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Free training for children of martyrs." data-hi="शहीदों के बच्चे को मुफ्त प्रशिक्षण।">Free training for children of martyrs.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Free information and advice about jobs." data-hi="नौकरियों के बारे में मुफ्त जानकारी तथा सलाह।">Free information and advice about jobs.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Free document verification, physical and medical tests." data-hi="कागजों की जाँच शारीरिक तथा स्वास्थ्य परीक्षण मुफ्त।">Free document verification, physical and medical tests.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Free treatment for physical deficiencies." data-hi="शारीरिक कमियों का इलाज मुफ्त।">Free treatment for physical deficiencies.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Free study material and academy dress." data-hi="पाठन सामग्री तथा अकादमी की ड्रेस मुफ्त।">Free study material and academy dress.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Facility for online study and exams." data-hi="ऑन लाइन पढ़ने तथा परीक्षा देने की व्यवस्था।">Facility for online study and exams.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Daily exams on OMR sheets." data-hi="रोज ओ०एम०आर० सीट पर परीक्षा का आयोजन।">Daily exams on OMR sheets.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Academy's own excellent ground and gym." data-hi="अकादमी का अपना शानदार ग्राउण्ड तथा जिम।">Academy's own excellent ground and gym.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Physical education by coaches trained by National Institute of Sports." data-hi="राष्ट्रीय खेल संस्थान द्वारा प्रशिक्षित प्रशिक्षकों द्वारा शारीरिक शिक्षा का आयोजन तथा अभ्यास।">Physical education by coaches trained by National Institute of Sports.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Minimum 14 hours of training and three examinations daily." data-hi="रोज कम से कम 14 घण्टे का प्रशिक्षण तथा तीन परीक्षाएँ।">Minimum 14 hours of training and three examinations daily.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Special attention on weak students." data-hi="कमजोर छात्रों पर विशेष ध्यान।">Special attention on weak students.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Clean residential and food facility." data-hi="साफ सुथरी आवासीय तथा खाने की सुविधा।">Clean residential and food facility.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Free medical facilities." data-hi="मेडिकल सुविधा मुफ्त।">Free medical facilities.</span></li>
+                <li><i class="fas fa-hand-point-right"></i><span data-en="Academy's success rate is more than 90%." data-hi="अकादमी का सफलता प्रतिशत 90% से ज्यादा।">Academy's success rate is more than 90%.</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Academy Gallery" data-hi="अकादमी गैलरी">Academy Gallery</h2>
+                <p class="section-subtitle" data-en="Glimpses of our training programs and facilities" data-hi="हमारे प्रशिक्षण कार्यक्रमों और सुविधाओं की झलक">Glimpses of our training programs and facilities</p>
+            </div>
+
+            <div class="gallery-tabs">
+                <button class="tab-btn active" onclick="showGallery('photos')">Photos</button>
+                <button class="tab-btn" onclick="showGallery('videos')">Videos</button>
+            </div>
+            
+            <div id="photos-gallery" class="gallery-content active">
+                <div class="photo-tabs">
+                    <button class="photo-tab-btn active" onclick="showPhotoSection('physical')">Physical</button>
+                    <button class="photo-tab-btn" onclick="showPhotoSection('written')">Written</button>
+                    <button class="photo-tab-btn" onclick="showPhotoSection('success')">Success Story</button>
+                </div>
+                <div class="gallery-subsection photo-section" id="physical-section">
+                    <h3 class="subsection-title" data-en="Physical Training" data-hi="शारीरिक प्रशिक्षण">Physical Training</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('img1.jpeg')">
+                            <img src="img1.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img2.jpeg')">
+                            <img src="img2.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img3.jpeg')">
+                            <img src="img3.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img4.jpeg')">
+                            <img src="img4.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img6.jpeg')">
+                            <img src="img6.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img8.jpeg')">
+                            <img src="img8.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img12.jpeg')">
+                            <img src="img12.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img15.jpeg')">
+                            <img src="img15.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img16.jpeg')">
+                            <img src="img16.jpeg" alt="Physical Training">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img17.jpeg')">
+                            <img src="img17.jpeg" alt="Physical Training">
+                        </div>
+                         <div class="gallery-item" onclick="openLightbox('img21.jpeg')">
+                            <img src="img21.jpeg" alt="Physical Training">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-subsection photo-section" id="written-section" style="display:none;">
+                    <h3 class="subsection-title" data-en="Written Exam Preparation" data-hi="लिखित परीक्षा की तैयारी">Written Exam Preparation</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('img5.jpeg')">
+                            <img src="img5.jpeg" alt="Written Exam Preparation">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img7.jpeg')">
+                            <img src="img7.jpeg" alt="Written Exam Preparation">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img9.jpeg')">
+                            <img src="img9.jpeg" alt="Written Exam Preparation">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img10.jpeg')">
+                            <img src="img10.jpeg" alt="Written Exam Preparation">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img18.jpeg')">
+                            <img src="img18.jpeg" alt="Written Exam Preparation">
+                        </div>
+                         <div class="gallery-item" onclick="openLightbox('img19.jpeg')">
+                            <img src="img19.jpeg" alt="Written Exam Preparation">
+                        </div>
+                         <div class="gallery-item" onclick="openLightbox('img20.jpeg')">
+                            <img src="img20.jpeg" alt="Written Exam Preparation">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-subsection photo-section" id="success-section" style="display:none;">
+                    <h3 class="subsection-title" data-en="Success Stories" data-hi="सफलता की कहानियाँ">Success Stories</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('img11.jpeg')">
+                            <img src="img11.jpeg" alt="Success Story">
+                            <!-- <div class="gallery-item-overlay"><h4>Cadet Name</h4><p>Selected in NDA</p></div> -->
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img13.jpeg')">
+                            <img src="img13.jpeg" alt="Success Story">
+                            <!-- <div class="gallery-item-overlay"><h4>Cadet Name</h4><p>Selected in IMA</p></div> -->
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img14.jpeg')">
+                            <img src="img14.jpeg" alt="Success Story">
+                            <!-- <div class="gallery-item-overlay"><h4>Cadet Name</h4><p>Selected in Air Force</p></div> -->
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img22.jpeg')">
+                            <img src="img22.jpeg" alt="Success Story">
+                            <!-- <div class="gallery-item-overlay"><h4>Cadet Name</h4><p>Selected in Navy</p></div> -->
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img23.jpeg')">
+                            <img src="img23.jpeg" alt="Success Story">
+                            <!-- <div class="gallery-item-overlay"><h4>Cadet Name</h4><p>Selected in CDS</p></div> -->
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img24.jpeg')">
+                            <img src="img24.jpeg" alt="Success Story">
+                            <!-- <div class="gallery-item-overlay"><h4>Cadet Name</h4><p>Selected in AFCAT</p></div> -->
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('img25.jpeg')">
+                            <img src="img25.jpeg" alt="Success Story">
+                            <!-- <div class="gallery-item-overlay"><h4>Cadet Name</h4><p>Selected in Army</p></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="videos-gallery" class="gallery-content">
+                <div class="gallery-grid video-grid">
+                    <!-- Replace with your Google Drive file IDs and thumbnails -->
+                    <div class="gallery-item video-item" onclick="openVideoModal('1yeOhaZwHOLOw1A4p9vU_zi4sxpiq7ltz')">
+                        <img src="img1.jpeg" alt="Video Thumbnail 1">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="gallery-item video-item" onclick="openVideoModal('1ypaR2ioHNx1dLivwbmOjsQ29qnmClbMJ')">
+                        <img src="img2.jpeg" alt="Video Thumbnail 2">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Contact Us" data-hi="संपर्क करें">Contact Us</h2>
+                <p class="section-subtitle" data-en="Get in touch with us for admissions and inquiries" data-hi="प्रवेश और पूछताछ के लिए हमसे संपर्क करें">Get in touch with us for admissions and inquiries</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-heading" data-en="Get in Touch" data-hi="संपर्क में रहें">Get in Touch</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong data-en="Address:" data-hi="पता:">Address:</strong>
+                            <p data-en="H-310 Indralok Colony, Krishna Nagar, Lucknow - 226023, Uttar Pradesh" data-hi="एच-310 इंद्रलोक कॉलोनी, कृष्णा नगर, लखनऊ - 226023, उत्तर प्रदेश">H-310 Indralok Colony, Krishna Nagar, Lucknow - 226023, Uttar Pradesh</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong data-en="Phone:" data-hi="फोन:">Phone:</strong>
+                            <p>8564000000,
+                                8565000000,
+                                8896000000,
+                                9235000000,
+                                7786000OO0,
+                                8115000000,
+                                8355000000,
+                                8924000000,
+                                9005400000,
+                                7388400000,
+                                9005340000,
+                                7388880000,
+                                8400770000,
+                                0522-4010000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong data-en="Email:" data-hi="ईमेल:">Email:</strong>
+                            <p>defencecareeracademy@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong data-en="Timing:" data-hi="समय:">Timing:</strong>
+                            <p data-en="24 X 7" data-hi="24 X 7">24 X 7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 class="contact-heading" data-en="Send Message" data-hi="संदेश भेजें">Send Message</h3>
+                    
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-hi="आपका नाम" required>
+                        <input type="email" placeholder="Your Email" data-placeholder-en="Your Email" data-placeholder-hi="आपका ईमेल" required>
+                        <input type="tel" placeholder="Phone Number" data-placeholder-en="Phone Number" data-placeholder-hi="फोन नंबर" required>
+                        <textarea rows="5" placeholder="Your Message" data-placeholder-en="Your Message" data-placeholder-hi="आपका संदेश" required></textarea>
+                        <button type="submit" class="submit-btn" data-en="Send Message" data-hi="संदेश भेजें">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <h3 class="social-title" data-en="Follow Us" data-hi="हमें फॉलो करें">Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/www.aespl.edu.in/" class="social-link facebook" target="blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/majorarunsingh/?hl=en" class="social-link instagram" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ssbcoaching" class="social-link twitter" target="blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com/@defencecareeracademyofficial?si=wQ_7cWwsjEr9iF-L" class="social-link youtube" target="blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/major-arun-singh-7867241b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link linkedin" target="blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-en="© 2025 Defence Career Academy Lucknow. All rights reserved." data-hi="© 2025 डिफेन्स कैरियर अकादमी लखनऊ। सभी अधिकार सुरक्षित हैं।">© 2025 Defence Career Academy Lucknow. All rights reserved.</p>
+            
+        </div>
+    </footer>
+
+    <!-- Course Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCourseModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <div class="video-container" id="video-player-container">
+                <!-- YouTube video player will be embedded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
