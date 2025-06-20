@@ -67,6 +67,16 @@ body {
     object-fit: cover;
 }
 
+.header-logos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-mobile {
+    display: none;
+}
+
 .academy-info {
     flex: 1;
     text-align: center;
@@ -90,7 +100,7 @@ body {
 .language-btn {
     background: var(--academy-red);
     color: var(--white);
-    border: none;
+    border: 1px solid var(--white);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -1312,11 +1322,11 @@ nav a:before,
         display: none;
         flex-direction: column;
         width: 100%;
-        background: var(--academy-red);
+        background: var(--academy-green);
         position: absolute;
         top: 100%; /* Position below navbar */
         left: 0;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     
@@ -1326,13 +1336,16 @@ nav a:before,
     
     .nav-links li {
         text-align: center;
-        margin: 0.5rem 0;
+        margin: 0;
         width: 100%;
     }
 
     .nav-links a {
         display: block;
         width: 100%;
+        padding: 0 1rem;
+        color: var(--white);
+        line-height: 1.1;
     }
     
     .slider-section {
