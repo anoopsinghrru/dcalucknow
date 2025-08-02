@@ -532,81 +532,30 @@ function showPhotoSection(section) {
     }
 }
 
-// Google Sheets Visitor Counter Configuration
-const GOOGLE_SHEETS_API_URL = VISITOR_COUNTER_CONFIG.GOOGLE_SHEETS_API_URL;
-
-// Visitor Counter Functionality using Google Sheets
-async function initVisitorCounter() {
-    const visitorCountElement = document.getElementById('visitorCount');
-    if (!visitorCountElement) return;
-
-    // Check if we're in development mode (localhost/127.0.0.1)
-    const isDevelopment = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
-    
-    if (isDevelopment) {
-        console.log('Development mode detected - using localStorage fallback');
-        fallbackVisitorCounter(visitorCountElement);
-        return;
-    }
-
-    try {
-        // Show loading state
-        visitorCountElement.textContent = 'Loading...';
-        
-        // Try to get the current count first
-        const response = await fetch(GOOGLE_SHEETS_API_URL, {
-            method: 'GET',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        });
-        
-        if (!response.ok) {
-            throw new Error('Failed to fetch visitor count');
-        }
-        
-        const data = await response.json();
-        let currentCount = data.count || 15000;
-        
-        // For now, just increment locally since POST has CORS issues
-        currentCount++;
-        
-        // Animate the count display
-        animateCount(visitorCountElement, 0, currentCount, 2000);
-        
-        // Try to update the sheet in the background (this might fail due to CORS)
-        fetch(GOOGLE_SHEETS_API_URL, {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }).catch(error => {
-            console.log('Background update failed (expected due to CORS):', error);
-        });
-        
-    } catch (error) {
-        console.error('Error updating visitor counter:', error);
-        // Fallback to localStorage if API fails
-        fallbackVisitorCounter(visitorCountElement);
-    }
-}
-
-// Fallback visitor counter using localStorage
-function fallbackVisitorCounter(element) {
+// Visitor Counter Functionality
+function initVisitorCounter() {
+    // Get the visitor count from localStorage
     let visitorCount = localStorage.getItem('visitorCount');
     
+    // If no count exists, start from a base number (e.g., 15000 to make it look more established)
     if (!visitorCount) {
         visitorCount = 15000;
     } else {
         visitorCount = parseInt(visitorCount);
     }
     
+    // Increment the count for this visit
     visitorCount++;
+    
+    // Save the updated count
     localStorage.setItem('visitorCount', visitorCount.toString());
     
-    animateCount(element, 0, visitorCount, 2000);
+    // Display the count with animation
+    const visitorCountElement = document.getElementById('visitorCount');
+    if (visitorCountElement) {
+        // Animate the count up
+        animateCount(visitorCountElement, 0, visitorCount, 2000);
+    }
 }
 
 function animateCount(element, start, end, duration) {
