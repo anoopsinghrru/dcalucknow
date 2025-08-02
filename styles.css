@@ -67,6 +67,16 @@ body {
     object-fit: cover;
 }
 
+.header-logos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-mobile {
+    display: none;
+}
+
 .academy-info {
     flex: 1;
     text-align: center;
@@ -90,7 +100,7 @@ body {
 .language-btn {
     background: var(--academy-red);
     color: var(--white);
-    border: none;
+    border: 1px solid var(--white);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -1312,11 +1322,11 @@ nav a:before,
         display: none;
         flex-direction: column;
         width: 100%;
-        background: var(--academy-red);
+        background: var(--academy-green);
         position: absolute;
         top: 100%; /* Position below navbar */
         left: 0;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     
@@ -1326,13 +1336,16 @@ nav a:before,
     
     .nav-links li {
         text-align: center;
-        margin: 0.5rem 0;
+        margin: 0;
         width: 100%;
     }
 
     .nav-links a {
         display: block;
         width: 100%;
+        padding: 0 1rem;
+        color: var(--white);
+        line-height: 1.1;
     }
     
     .slider-section {
@@ -1503,5 +1516,112 @@ nav a:before,
         width: 100%;
         padding: 0.75rem 0;
         font-size: 1rem;
+    }
+}
+
+/* Visitor Counter Section */
+.visitor-counter-section {
+    background: linear-gradient(135deg, var(--academy-red) 0%, #b91c1c 100%);
+    padding: 3rem 0;
+    color: var(--white);
+    text-align: center;
+}
+
+.visitor-counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.visitor-counter-icon {
+    font-size: 3rem;
+    color: var(--white);
+    animation: pulse 2s infinite;
+}
+
+.visitor-counter-content {
+    text-align: left;
+}
+
+.visitor-counter-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.visitor-counter-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: countUp 1s ease-out;
+}
+
+.visitor-counter-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles for visitor counter */
+@media (max-width: 768px) {
+    .visitor-counter-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .visitor-counter-icon {
+        font-size: 2.5rem;
+    }
+    
+    .visitor-counter-title {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    
+    .visitor-counter-number {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .visitor-counter-subtitle {
+        text-align: center;
+        font-size: 0.9rem;
     }
 }

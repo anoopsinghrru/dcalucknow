@@ -531,3 +531,118 @@ function showPhotoSection(section) {
         tabBtns[2].classList.add('active');
     }
 }
+
+// Google Sheets Visitor Counter Configuration
+const GOOGLE_SHEETS_API_URL = VISITOR_COUNTER_CONFIG.GOOGLE_SHEETS_API_URL;
+
+// Visitor Counter Functionality using Google Sheets
+async function initVisitorCounter() {
+    const visitorCountElement = document.getElementById('visitorCount');
+    if (!visitorCountElement) return;
+
+    // Check if we're in development mode (localhost/127.0.0.1)
+    const isDevelopment = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
+    
+    if (isDevelopment) {
+        console.log('Development mode detected - using localStorage fallback');
+        fallbackVisitorCounter(visitorCountElement);
+        return;
+    }
+
+    try {
+        // Show loading state
+        visitorCountElement.textContent = 'Loading...';
+        
+        // Try to get the current count first
+        const response = await fetch(GOOGLE_SHEETS_API_URL, {
+            method: 'GET',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch visitor count');
+        }
+        
+        const data = await response.json();
+        let currentCount = data.count || 15000;
+        
+        // For now, just increment locally since POST has CORS issues
+        currentCount++;
+        
+        // Animate the count display
+        animateCount(visitorCountElement, 0, currentCount, 2000);
+        
+        // Try to update the sheet in the background (this might fail due to CORS)
+        fetch(GOOGLE_SHEETS_API_URL, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        }).catch(error => {
+            console.log('Background update failed (expected due to CORS):', error);
+        });
+        
+    } catch (error) {
+        console.error('Error updating visitor counter:', error);
+        // Fallback to localStorage if API fails
+        fallbackVisitorCounter(visitorCountElement);
+    }
+}
+
+// Fallback visitor counter using localStorage
+function fallbackVisitorCounter(element) {
+    let visitorCount = localStorage.getItem('visitorCount');
+    
+    if (!visitorCount) {
+        visitorCount = 15000;
+    } else {
+        visitorCount = parseInt(visitorCount);
+    }
+    
+    visitorCount++;
+    localStorage.setItem('visitorCount', visitorCount.toString());
+    
+    animateCount(element, 0, visitorCount, 2000);
+}
+
+function animateCount(element, start, end, duration) {
+    const startTime = performance.now();
+    const difference = end - start;
+    
+    function updateCount(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Use easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(start + (difference * easeOutQuart));
+        
+        element.textContent = current.toLocaleString();
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateCount);
+        }
+    }
+    
+    requestAnimationFrame(updateCount);
+}
+
+// Initialize visitor counter when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize existing functionality
+    initVisitorCounter();
+    
+    // Add event listeners
+    document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('nav-links').classList.toggle('active');
+    });
+    
+    // Initialize other functionality
+    autoSlide();
+    initScrollAnimations();
+});

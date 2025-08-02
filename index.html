@@ -25,8 +25,12 @@
             <div class="header-content">
                 <!-- Left Logo and Academy Name -->
                 <div class="header-left">
-                    <img src="AESPL.jpg" 
-                         alt="Defence Academy Logo" class="logo">
+                    <div class="header-logos">
+                        <img src="AESPL.jpg" 
+                             alt="Defence Academy Logo" class="logo">
+                        <img src="dcalogo1.png" 
+                             alt="Logo" class="logo logo-mobile">
+                    </div>
                     <div class="academy-info">
                         <h1 class="academy-name" data-en="Defence Career Academy Lucknow" data-hi="डिफेन्स कैरियर अकादमी लखनऊ">Defence Career Academy Lucknow</h1>
                         <p class="academy-company" data-en="(ARUN EDUCATIONAL SERVICES PRIVATE LIMITED AN ISO 9001-2008 CERTIFIED ORGANIZATION)" data-hi="(अरुण एजूकेशनल सर्विसेस प्रा० लिए लखनऊ का उपक्रम AN ISO 9001-2008 प्रमाणित संस्था)">(ARUN EDUCATIONAL SERVICES PRIVATE LIMITED AN ISO 9001-2008 CERTIFIED ORGANIZATION)</p>
@@ -37,7 +41,7 @@
                 <div class="header-right">
                     <button id="languageToggle" class="language-btn">हिंदी</button>
                     <img src="dcalogo1.png" 
-                         alt=" Logo" class="logo">
+                         alt=" Logo" class="logo logo-desktop">
                     
                 </div>
             </div>
@@ -189,7 +193,7 @@
                             </div>
                             <div class="faculty-info">
                                 <h3 class="faculty-name" data-en="Brig. (Retd.) Raj Kumar Chauhan" data-hi="ब्रिगेडियर (से.नि) राजकुमार चौहान">ब्रिगेडियर (से.नि) राजकुमार चौहान</h3>
-                                <p class="faculty-title" data-en="Vishisht Seva Mandal, Founder & Patron" data-hi="विशिष्ट सेवा मंडल, संस्थापक एवं संरक्षक">विशिष्ट सेवा मंडल, संस्थापक एवं संरक्षक</p>
+                                <p class="faculty-title" data-en="Vishisht Seva Mandal, Founder & Patron" data-hi="विशिष्ट सेवा मंडल, संस्थापक एवं संरक्षक">विशिष्ट सेवा मेडल, संस्थापक एवं संरक्षक</p>
                             </div>
                         </div>
                 
@@ -534,6 +538,22 @@
         </div>
     </section>
 
+    <!-- Visitor Counter Section -->
+    <section class="visitor-counter-section">
+        <div class="container">
+            <div class="visitor-counter-container">
+                <div class="visitor-counter-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="visitor-counter-content">
+                    <h3 class="visitor-counter-title" data-en="Total Visitors" data-hi="कुल आगंतुक">Total Visitors</h3>
+                    <div class="visitor-counter-number" id="visitorCount">0</div>
+                    <p class="visitor-counter-subtitle" data-en="Thank you for visiting Defence Career Academy" data-hi="डिफेन्स कैरियर अकादमी में आने के लिए धन्यवाद">Thank you for visiting Defence Career Academy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -569,6 +589,7 @@
         </div>
     </div>
 
+    <script src="visitor-counter-config.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

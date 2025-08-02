@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets API Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #005a87;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #f8f9fa;
+            border-left: 4px solid #007cba;
+        }
+        .error {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+        .success {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google Sheets API Test</h1>
+        <p>This page helps you test if your Google Apps Script is working correctly.</p>
+        
+        <button onclick="testGet()">Test GET Request</button>
+        <button onclick="testPost()">Test POST Request</button>
+        <button onclick="testBoth()">Test Both (GET + POST)</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const API_URL = 'https://script.google.com/macros/s/AKfycbz1OTp13973w7ljZgIHovX-fmfT3k8x8S6301w4UPIkXv3Z1r-i_2jy5Rpln33AZdZv/exec';
+        
+        function showResult(message, isError = false, isSuccess = false) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<div class="result ${isError ? 'error' : isSuccess ? 'success' : ''}">${message}</div>`;
+        }
+        
+        async function testGet() {
+            try {
+                showResult('Testing GET request...');
+                
+                const response = await fetch(API_URL, {
+                    method: 'GET',
+                    mode: 'cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                showResult(`✅ GET Success! Current count: ${data.count}`, false, true);
+                
+            } catch (error) {
+                showResult(`❌ GET Failed: ${error.message}`, true);
+            }
+        }
+        
+        async function testPost() {
+            try {
+                showResult('Testing POST request...');
+                
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                showResult(`✅ POST Success! New count: ${data.count}`, false, true);
+                
+            } catch (error) {
+                showResult(`❌ POST Failed: ${error.message}`, true);
+            }
+        }
+        
+        async function testBoth() {
+            try {
+                showResult('Testing GET + POST sequence...');
+                
+                // First GET
+                const getResponse = await fetch(API_URL, {
+                    method: 'GET',
+                    mode: 'cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                if (!getResponse.ok) {
+                    throw new Error(`GET failed! status: ${getResponse.status}`);
+                }
+                
+                const getData = await getResponse.json();
+                const originalCount = getData.count;
+                
+                // Then POST
+                const postResponse = await fetch(API_URL, {
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                if (!postResponse.ok) {
+                    throw new Error(`POST failed! status: ${postResponse.status}`);
+                }
+                
+                const postData = await postResponse.json();
+                const newCount = postData.count;
+                
+                showResult(`✅ Both Success! Original: ${originalCount} → New: ${newCount}`, false, true);
+                
+            } catch (error) {
+                showResult(`❌ Test Failed: ${error.message}`, true);
+            }
+        }
+    </script>
+</body>
+</html> 
