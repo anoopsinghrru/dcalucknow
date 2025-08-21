@@ -366,9 +366,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 });
 
 // Add CSS animations
@@ -580,6 +582,19 @@ function animateCount(element, start, end, duration) {
     requestAnimationFrame(updateCount);
 }
 
+// Location function
+function openLocation(campus) {
+    
+    const locations = {
+        krishnanagar: 'https://maps.app.goo.gl/5ZBpV78B5nqGtfhB8', 
+        banthra: 'https://maps.app.goo.gl/KpYgzcPZZxaX1Kcm9' 
+    };
+    
+    if (locations[campus]) {
+        window.open(locations[campus], '_blank');
+    }
+}
+
 // Initialize visitor counter when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize existing functionality
@@ -587,9 +602,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add event listeners
     document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        document.getElementById('nav-links').classList.toggle('active');
-    });
     
     // Initialize other functionality
     autoSlide();
